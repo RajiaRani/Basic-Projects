@@ -1,0 +1,60 @@
+<%- include("includes/header.ejs") %>
+<body id="body">
+   <div class="middle-container">
+    <% for ( let i of info) { %>
+        <h3> name : <%= i.name %></h3>
+        <p>email : <%= i.email %></p>
+        <p>phone: <%= i.phone %></p>
+        <% } %>
+     
+
+    <h3>Education :</h3>
+    <div class="edu">
+    <% for(e of edu) { %>
+      <div class="edu1">
+        <p>Highest Degree : <b><%= e.deg %></b></p>
+        <p>University : <b><%= e.clg %></b></p>
+        <p>Marks : <b><%= e.marks %></b></p>
+      </div>
+    <% } %>
+    </div>
+    <button>Edit</button>
+    <button>Add</button>
+    <button>Delete</button>
+   
+   <h3>Experience :</h3>
+    <div class="exp">
+        <% for ( let ex of exp) {%>
+            <p> Experience : <%= ex.year %></p>
+            <p> Profile: <%= ex.profile %></p>
+            <p> Field : <%= ex.area %></p>
+            <hr>
+        <% } %>
+    </div>
+    <button>Edit</button>
+    <button>Add</button>
+    <button>Delete</button>
+
+    <h3>Skills :</h3>
+    <div class="skill">
+        <% for ( let s of skills) {%>
+            <ul>
+                <li><%= s.skill1 %></li>
+                <li><%= s.skill2%></li>
+                <li><%= s.skill3 %></li>
+                <li><%= s.skill4 %></li>
+                <li><%= s.skill5 %></li>
+                <li><%= s.skill6 %></li>
+                <li><%= s.skill7 %></li>
+                <li><%= s.skill8%></li>
+            </ul>
+        <% } %>
+    </div>
+    <button>Edit</button>
+    <button>Add</button>
+    <button>Delete</button>
+     <br> <br> <br> <br>
+
+     <button>Add More</button>
+   </div>
+</body>

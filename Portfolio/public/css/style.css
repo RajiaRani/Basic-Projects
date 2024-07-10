@@ -1,0 +1,23 @@
+#body{
+    width: 50%;
+    margin: auto;
+    border: 1px solid black;
+    height: auto;
+    box-shadow: 1px 0 10px 1px black;
+    text-transform: capitalize;
+    padding-bottom: 30px;
+}
+.middle-container{
+    padding-left: 13px ;
+    padding-right: 13px;
+}
+.edu1{
+    border-right: 1px solid black;
+    padding: 5px;
+   
+}
+.edu{
+    display: flex;
+    align-items:flex-start;
+    justify-content: left;
+}
