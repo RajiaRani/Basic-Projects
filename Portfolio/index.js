@@ -30,6 +30,7 @@ let exp = [
         }
        ];
 
+
 let edu = [
         {
             id : uuidv4(),
@@ -85,7 +86,7 @@ let Ed = edu.find((e) => id === e.id);
 res.render("edunew.ejs");
 });
 
-app.post("/portfolio", (req,res) => {
+app.post("/portfolio/education", (req,res) => {
   let { deg, clg, marks } = req.body;
   edu.push({deg, clg, marks});
   res.redirect("/portfolio");
@@ -103,6 +104,28 @@ app.get("/portfolio/:id/expshow", (req,res) => {
     let { id } = req.params;
     console.log(id);
     res.send("done");
+});
+
+
+
+// Experience New route
+app.get("/portfolio/newexperience", (req,res) => {
+    res.render("expnew.ejs");
+});
+
+app.post("/portfolio/experience", (req,res) => {
+    let { year, profile, area} = req.body;
+     exp.push({year, profile,area});
+    res.redirect("/portfolio");
+});
+
+//Delete Route for experience
+app.delete("/portfolio/:id/delexperience", (req,res) => {
+    let { id } = req.params;
+    console.log("Delete request received for id:", id); // Log received id
+    exp = exp.filter((ex) => id !== ex.id);
+    console.log("Updated exp array:", exp); // Log updated array
+    res.redirect("/portfolio");
 });
 
 

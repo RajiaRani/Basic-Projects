@@ -34,12 +34,13 @@
             <p> Field : <%= ex.area %></p>
             <button><a href="/portfolio/<%= ex.id %>/expshow ">See More</a></button>
             <button>Edit</button>
-            <button>Add</button>
-            <button>Delete</button>
-            <hr>
+            <form method="POST" action="/portfolio/<%= ex.id %>/delexperience?_method=DELETE">
+                <button>Delete</button>
+            </form>
         <% } %>
     </div>
-  
+    <button><a href="/portfolio/newexperience">Add</a></button>
+    <hr>
 
     <h3>Skills :</h3>
     <div class="skill">
